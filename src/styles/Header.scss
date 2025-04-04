@@ -1,0 +1,44 @@
+@import './variables.scss';
+.header {
+    width: 100%;
+    margin: 30px auto;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+        margin: 20px auto;
+    }
+    &_logo {
+        width: 210px;
+        height: 68px;
+        @media screen and (max-width: 768px) {
+            width: 145px;
+            height: 47px;
+        }
+    }
+    &_navbar {
+        width: 309px;
+        display: flex;
+        justify-content: flex-end;
+        .navbar-item {
+            margin-left: 50px;
+            font-size: $fontClamp;
+            font-weight: 500;
+            text-decoration: none;
+            color: $black;
+            &:hover {
+                color: $primary;
+            }
+            &.active {
+                border-bottom: 1px solid $black;
+                padding-bottom: 0;
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                margin-left: 20px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

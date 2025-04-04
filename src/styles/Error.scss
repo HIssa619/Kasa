@@ -1,0 +1,37 @@
+@import './variables.scss';
+.error {
+    margin-top: 60px;
+    margin-bottom: 70px;
+    @include flexbox(column, center, center);
+    &_404 {
+        font-size: 288px;
+        font-weight: 700;
+        margin: 0;
+        color: $primary;
+        @media screen and (max-width: 768px) {
+            font-size: 96px;
+        }
+    }
+    &_texte {
+        text-align: center;
+        margin-top: 40px;
+        color: $primary;
+        font-size: 36px;
+        font-weight: 500;
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+        span {
+            display: block;
+            @media screen and (min-width: 768px) {
+                display: inline;
+            }
+        }
+    }
+    &_link {
+        margin-top: 80px;
+        color: $black;
+        font-weight: $font500;
+        font-size: 18px;
+    }
+}

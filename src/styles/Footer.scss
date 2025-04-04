@@ -1,0 +1,24 @@
+@import './variables.scss';
+.footer {
+    width: 100%;
+    max-width: 1440px;
+    height: 209px;
+    margin: 0 auto;
+    background-color: black;
+    @include flexbox(column, flex-end, center);
+    &_texte {
+        color: white;
+        font-size: $fontClamp;
+        margin-top: 50px;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+            width: 100px;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+        width: 100%;
+    }
+}
